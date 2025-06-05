@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../src/js/refs.js"],"sourcesContent":["//Обʼєкт з посиланнями на ДОМ елементи\n\nexport const refs = {\n  modal: document.querySelector('.modal'),\n  closeModalBtn: document.querySelector('.modal__close-btn'),\n};\n"],"names":[],"mappings":"ssBAGS,SAAS,cAAc,QAAQ,EACvB,SAAS,cAAc,mBAAmB"}
