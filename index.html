@@ -5,16 +5,76 @@
     <link rel="icon" type="image/svg+xml" href="/project-js-solo/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artists Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=IBM+Plex+Sans:wght@100..700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-B0VQ40AT.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-BbLoffww.css">
   </head>
   <body>
     <header class="header">
-  <div class="container header__container"></div>
+  <div class="container header__container">
+    <a class="link-logo" href="index.html">
+      <svg class="logo-header">
+        <use href="/project-js-solo/assets/sprite-BbGS9As6.svg#icon-logo"></use>
+      </svg>
+    </a>
+
+    <nav class="header-menu">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a class="link-menu" href="#">Artists</a>
+        </li>
+        <li class="menu-item">
+          <a class="link-menu" href="#">About Us</a>
+        </li>
+        <li class="menu-item">
+          <a class="link-menu" href="#">Reviews</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="burger-btn" id="open-menu" type="button">
+      <svg class="burger-icon">
+        <use href="/project-js-solo/assets/sprite-BbGS9As6.svg#icon-burger"></use>
+      </svg>
+    </button>
+
+    <button class="close-btn hidden" id="close-btn" type="button">
+      <svg class="close-icon">
+        <use href="/project-js-solo/assets/sprite-BbGS9As6.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+  </div>
 </header>
 
 
-    <main></main>
+    <main>
+      <section class="hero">
+  <div class="container hero-container">
+    <div class="content">
+      <h1 class="hero-header">Discover Your Next Favorite Artist Today</h1>
+      <p class="hero-descr">
+        Dive into a world of music discoveries with ArtistsHub - your personal
+        guide to the boundless universe of sound. Explore, filter, and learn
+        about your favorite artists all in one place.
+      </p>
+      <a class="hero-btn" href="#">
+        Explore Artists
+        <svg class="hero-icon">
+          <use href="/project-js-solo/assets/sprite-BbGS9As6.svg#icon-right-arrow"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="photo-bg"></div>
+  </div>
+</section>
+
+    </main>
+    
     <div class="modal">
   <div class="modal__content">
     <button class="modal__close-btn" type="button">X</button>
