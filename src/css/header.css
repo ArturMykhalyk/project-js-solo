@@ -130,4 +130,10 @@
 }
 
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+    .header__container {
+        padding: 0, 64px;
+    }
+
+    ;
+}
