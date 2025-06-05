@@ -4,6 +4,7 @@ export default {
   mobileMenuOpen: document.getElementById('open-menu'),
   mobileMenuClose: document.getElementById('close-btn'),
   mobileMenuList: document.querySelector('.header-menu'),
+  artistsList: document.querySelector('.artists-list'),
 
   modal: document.querySelector('.modal'),
   closeModalBtn: document.querySelector('.modal__close-btn'),
