@@ -1,0 +1,133 @@
+.header {
+    background-color: #060307;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.header-menu.open {
+    transform: translate(-50%, 0);
+    opacity: 1;
+
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 12px;
+    height: 64px;
+}
+
+
+
+
+.logo-header {
+    width: 119px;
+    height: 51px;
+    fill: #764191;
+}
+
+.header-menu {
+
+    position: fixed;
+    top: 64px;
+    left: 50%;
+
+
+    height: calc(100vh - 64px);
+    background-color: #060307;
+
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 10000;
+}
+
+.menu-list {
+
+    width: 100vw;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    gap: 32px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.5;
+    color: #fff;
+    font-family: "IBM Plex Sans", sans-serif;
+
+}
+
+.close-btn, .burger-btn {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+}
+
+.burger-icon {
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+}
+
+.close-icon {
+    width: 12px;
+    height: 12px;
+    fill: #FFFFFF;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    .burger-btn {
+        display: none;
+    }
+
+    .header__container {
+        padding-left: 64px;
+        padding-right: 64px;
+        height: 72px;
+    }
+
+    .header-menu {
+        position: static;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    .menu-list {
+        width: 100%;
+        min-height: 0;
+        margin-top: 0;
+        flex-direction: row;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+
+    }
+
+    .logo-header {
+        width: 119px;
+        height: 51px;
+        fill: #ffffff;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {}

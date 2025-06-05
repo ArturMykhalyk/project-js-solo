@@ -1,5 +1,5 @@
 //Описана робота модалки - відкриття закриття і все що з модалкою повʼязано
-import { refs } from './refs';
+import refs from './refs';
 export function openModal() {
   refs.modal.classList.add('modal--is-open');
 
