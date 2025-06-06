@@ -1,25 +1,219 @@
-.artists {}
+.artists {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    scroll-margin-top: 64px;
+}
 
-.container {}
+.artists-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 16px;
+}
 
-.artists-container {}
+.artists-subtitle {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+}
 
-.artists-title {}
+.artists-list {
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+}
 
-.artists-subtitle {}
+.artists--photo {
+    border-radius: 16px;
+    width: 288px;
+    height: 177px;
 
-.artists-list {}
+    margin-bottom: 24px;
+}
 
-.artists--list__item {}
+.artists--genres {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
 
-.artists--photo {}
+.artists--genres__item {
+    padding: 4px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
 
-.artists--genres {}
 
-.artists--name {}
 
-.artists--descr {}
+.artists--name {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
 
-.artist--btn {}
+.artists--descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-.hero-icon {}
+.artist--btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+
+}
+
+.hero-icon {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+    padding: 5px 8px;
+}
+
+
+.loader {
+    display: block;
+    margin: 10px auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 40px;
+    aspect-ratio: 1;
+    outline: 2px solid #fff;
+    background:
+        radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+        conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0);
+    animation: l1 1.5s infinite;
+}
+
+.moreButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    gap: 12px;
+    border: none;
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 24px;
+    width: 288px;
+    height: 47px;
+    box-shadow: 0 1px 2px 0 rgba(6, 3, 7, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(6, 3, 7, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+    background: #764191;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.more-btn-icon {
+    fill: #fff;
+    width: 14px;
+    height: 15px;
+}
+
+.loader.visible, .moreButton.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+}
+
+
+@keyframes l1 {
+    0% {
+        background-position: 0 0
+    }
+
+    25% {
+        background-position: 100% 0
+    }
+
+    50% {
+        background-position: 100% 100%
+    }
+
+    75% {
+        background-position: 0 100%
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+
+    .artists-list {
+        gap: 32px;
+    }
+
+    .artists--photo {
+        width: 704px;
+        height: 432px;
+    }
+
+    .moreButton {
+        width: 340px;
+        margin: 0 auto;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+    .artists {
+        scroll-margin-top: 72px;
+    }
+
+    .artists-subtitle {
+        font-size: 60px;
+        width: 523px;
+        margin-bottom: 80px;
+    }
+
+    .artists--photo {
+        width: 640px;
+        height: 393px;
+
+    }
+
+    .artists--list__item {
+        width: 640px;
+    }
+
+    .moreButton {
+        width: 170px;
+
+    }
+}
