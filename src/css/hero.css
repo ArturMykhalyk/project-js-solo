@@ -188,21 +188,23 @@
         background: url('/img/hero-bg/desktop@1x.webp') no-repeat center center/cover;
     }
 
+    .photo-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(to bottom, rgba(6, 3, 7, 1) 0%, rgba(35, 19, 43, 0) 100%);
+        pointer-events: none;
+    }
+
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .photo-bg {
             background: url('/img/hero-bg/desktop@2x.webp') no-repeat center center;
             background-size: cover;
         }
 
-        .photo-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            background: linear-gradient(to bottom, rgba(6, 3, 7, 1) 0%, rgba(35, 19, 43, 0) 100%);
-            pointer-events: none;
-        }
+
     }
 }
