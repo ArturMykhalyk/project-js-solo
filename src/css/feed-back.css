@@ -1,0 +1,19 @@
+.feed-back {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    scroll-margin-top: 64px;
+}
+
+
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+    .feed-back {
+        padding-top: 112px;
+        padding-bottom: 112px;
+        scroll-margin-top: 72px;
+    }
+}

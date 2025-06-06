@@ -7,6 +7,7 @@ export default {
   artistsList: document.querySelector('.artists-list'),
   loader: document.querySelector('.loader'),
   moreBtn: document.querySelector('.moreButton'),
+  feedBack: document.querySelector('.feed-back-container'),
   modal: document.querySelector('.modal'),
   closeModalBtn: document.querySelector('.modal__close-btn'),
 };
