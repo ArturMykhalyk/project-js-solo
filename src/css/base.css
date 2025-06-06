@@ -5,7 +5,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #0f0101;
+  color: #ffffff;
+  background-color: #060307;
 
 
   font-synthesis: none;
@@ -14,4 +15,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+}
+
+html {
+  scroll-behavior: smooth;
 }

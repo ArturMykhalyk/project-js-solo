@@ -1,0 +1,51 @@
+<section class="about" id="about-section">
+  <div class="container about-container">
+    <picture class="about-pictures">
+      <source
+        media="(min-width: 1440px)"
+        srcset="
+          /img/about-us/desktop@1x.webp 1x,
+          /img/about-us/desktop@2x.webp 2x
+        "
+        width="640"
+        height="665"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          /img/about-us/tablet@1x.webp 1x,
+          /img/about-us/tablet@2x.webp 2x
+        "
+        width="704"
+        height="413"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          /img/about-us/mobile@1x.webp 1x,
+          /img/about-us/mobile@2x.webp 2x
+        "
+      />
+      <img
+        class="about-img"
+        src="/img/about-us/mobile@1x.webp"
+        alt="woman cut apple"
+        width="280"
+        height="168"
+        loading="lazy"
+      />
+    </picture>
+
+    <div class="about-content">
+      <svg class="about-logo">
+        <use href="/img/sprite.svg#icon-logomin"></use>
+      </svg>
+      <h2 class="about-title">About ArtistsHub</h2>
+      <p class="about-descr">
+        At ArtistsHub, our mission is to connect music lovers with the artists
+        they adore. We strive to create a vibrant community where discovering
+        new music is as enjoyable as listening to it.
+      </p>
+    </div>
+  </div>
+</section>
