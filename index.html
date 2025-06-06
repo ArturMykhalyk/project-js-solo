@@ -13,7 +13,7 @@
     />
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-C19taMLP.js">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-DOAFPwIZ.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-CSHEFsbZ.css">
   </head>
   <body>
     <header class="header">
@@ -30,7 +30,7 @@
           <a class="link-menu" href="#artists-section">Artists</a>
         </li>
         <li class="menu-item">
-          <a class="link-menu" href="#">About Us</a>
+          <a class="link-menu" href="#about-section">About Us</a>
         </li>
         <li class="menu-item">
           <a class="link-menu" href="#">Reviews</a>
@@ -91,12 +91,44 @@
 
       <section class="about" id="about-section">
   <div class="container about-container">
-    <h2 class="about-title">About ArtistsHub</h2>
-    <p>
-      At ArtistsHub, our mission is to connect music lovers with the artists
-      they adore. We strive to create a vibrant community where discovering new
-      music is as enjoyable as listening to it.
-    </p>
+    <picture class="about-pictures">
+      <source
+        media="(min-width: 1440px)"
+        srcset="/project-js-solo/assets/desktop@1x-njtvNyPq.webp 1x, /project-js-solo/assets/desktop@2x-dZZtFN2Z.webp 2x"
+        width="640"
+        height="665"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/project-js-solo/assets/tablet@1x-9tx58y5P.webp 1x, /project-js-solo/assets/tablet@2x-CE3W16hD.webp 2x"
+        width="704"
+        height="413"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="/project-js-solo/assets/mobile@1x-DxZWnXLB.webp 1x, /project-js-solo/assets/mobile@2x-BbjB3Gtr.webp 2x"
+      />
+      <img
+        class="about-img"
+        src="/project-js-solo/assets/mobile@1x-DxZWnXLB.webp"
+        alt="woman cut apple"
+        width="280"
+        height="168"
+        loading="lazy"
+      />
+    </picture>
+
+    <div class="about-content">
+      <svg class="about-logo">
+        <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-logomin"></use>
+      </svg>
+      <h2 class="about-title">About ArtistsHub</h2>
+      <p class="about-descr">
+        At ArtistsHub, our mission is to connect music lovers with the artists
+        they adore. We strive to create a vibrant community where discovering
+        new music is as enjoyable as listening to it.
+      </p>
+    </div>
   </div>
 </section>
 
