@@ -80,42 +80,62 @@ export function createFeedBack(feedBacks) {
       <div class="star-container">
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${
+              import.meta.env.BASE_URL
+            }/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
       </div>
