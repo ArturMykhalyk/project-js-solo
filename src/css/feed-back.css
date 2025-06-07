@@ -14,7 +14,17 @@
 .star-container .star {
     width: 20px;
     height: 19px;
+
 }
+
+.star-container .star .star-empty {
+    fill: #fff;
+}
+
+.star-container .star .star-full {
+    fill: #764191;
+}
+
 
 .feed-back--descr {
     font-family: "Epilogue", sans-serif;
