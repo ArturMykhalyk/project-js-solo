@@ -23,18 +23,18 @@ import{a as m,i as g,S as w,N as B,P as k,A as E}from"./assets/vendor-D3YsHSez.j
       <div class="star-container">
         <div class="star">
           <svg class="star-empty">
-            <use href="./img/sprite.svg#icon-star-empty"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="./img/sprite.svg#icon-star-full"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="./img/sprite.svg#icon-star-empty"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="./img/sprite.svg#icon-star-full"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
@@ -55,10 +55,10 @@ import{a as m,i as g,S as w,N as B,P as k,A as E}from"./assets/vendor-D3YsHSez.j
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="img/sprite.svg#icon-star-empty"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="img/sprite.svg#icon-star-full"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
       </div>
