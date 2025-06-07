@@ -31,7 +31,8 @@
     border-radius: 16px;
     width: 288px;
     height: 177px;
-
+    object-fit: cover;
+    object-position: top;
     margin-bottom: 24px;
 }
 
