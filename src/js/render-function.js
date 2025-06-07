@@ -80,18 +80,18 @@ export function createFeedBack(feedBacks) {
       <div class="star-container">
         <div class="star">
           <svg class="star-empty">
-            <use href="./img/sprite.svg#icon-star-empty"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="./img/sprite.svg#icon-star-full"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="./img/sprite.svg#icon-star-empty"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="./img/sprite.svg#icon-star-full"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
@@ -112,10 +112,10 @@ export function createFeedBack(feedBacks) {
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="img/sprite.svg#icon-star-empty"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="img/sprite.svg#icon-star-full"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
       </div>
