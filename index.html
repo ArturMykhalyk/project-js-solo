@@ -5,23 +5,30 @@
     <link rel="icon" type="image/svg+xml" href="/project-js-solo/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artists Hub</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=IBM+Plex+Sans:wght@100..700&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="/node_modules/css-star-rating/css/star-rating.css"
+    />
+
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-BZWs5a-V.js">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-wjhWB3DI.css">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-D3b7c8zY.css">
+    <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-D3YsHSez.js">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-F2hTJJT3.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-Bi_XRZdj.css">
   </head>
   <body>
     <header class="header">
   <div class="container header__container">
     <a class="link-logo" href="index.html">
       <svg class="logo-header">
-        <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-logo"></use>
+        <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-logo"></use>
       </svg>
     </a>
 
@@ -41,13 +48,13 @@
 
     <button class="burger-btn" id="open-menu" type="button">
       <svg class="burger-icon">
-        <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-burger"></use>
+        <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-burger"></use>
       </svg>
     </button>
 
     <button class="close-btn hidden" id="close-btn" type="button">
       <svg class="close-icon">
-        <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-close-menu"></use>
+        <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-close-menu"></use>
       </svg>
     </button>
   </div>
@@ -67,7 +74,7 @@
       <a class="hero-btn" href="#artists-section">
         Explore Artists
         <svg class="hero-icon">
-          <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-right-arrow"></use>
+          <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-right-arrow"></use>
         </svg>
       </a>
     </div>
@@ -84,7 +91,7 @@
     <button class="moreButton">
       Load More
       <svg class="more-btn-icon">
-        <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-bottom-arrow"></use>
+        <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-bottom-arrow"></use>
       </svg>
     </button>
   </div>
@@ -121,7 +128,7 @@
 
     <div class="about-content">
       <svg class="about-logo">
-        <use href="/project-js-solo/assets/sprite-B5VG03YC.svg#icon-logomin"></use>
+        <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-logomin"></use>
       </svg>
       <h2 class="about-title">About ArtistsHub</h2>
       <p class="about-descr">
@@ -134,7 +141,29 @@
 </section>
 
       <section class="feed-back" id="reviews">
-  <div class="container feed-back-container"></div>
+  <div class="container feed-back-container">
+    <div class="swiper modal-product__slider">
+      <div class="swiper-wrapper"></div>
+
+      <div class="my-slider-controls">
+        <button class="custom-prev">
+          <svg class="more-btn-icon">
+            <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-bottom-arrow"></use>
+          </svg>
+        </button>
+        <button class="custom-next">
+          <svg class="more-btn-icon">
+            <use href="/project-js-solo/assets/sprite-C_0eOBKc.svg#icon-bottom-arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="swiper-pagination">
+        <span class="bullet left" data-slide="0"></span>
+        <span class="bullet center" data-slide="middle"></span>
+        <span class="bullet right" data-slide="last"></span>
+      </div>
+    </div>
+  </div>
 </section>
 
     </main>

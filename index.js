@@ -1,33 +1,70 @@
-import{a as u,S as M,N as h,P as w,A as B}from"./assets/vendor-BZWs5a-V.js";(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const n of e)if(n.type==="childList")for(const a of n.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&o(a)}).observe(document,{childList:!0,subtree:!0});function r(e){const n={};return e.integrity&&(n.integrity=e.integrity),e.referrerPolicy&&(n.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?n.credentials="include":e.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function o(e){if(e.ep)return;e.ep=!0;const n=r(e);fetch(e.href,n)}})();async function m(t=1){try{const o="https://sound-wave.b.goit.study/api"+"/artists",e={limit:8,page:t};return(await u.get(o,{params:e})).data}catch(i){return console.log(i),null}}async function P(t=1){try{const o="https://sound-wave.b.goit.study/api"+"/feedbacks",e={limit:8,page:t};return(await u.get(o,{params:e})).data}catch(i){return console.log(i),null}}let p=0;function k(t){p=t}function f(){return p}const s={mobileMenuOpen:document.getElementById("open-menu"),mobileMenuClose:document.getElementById("close-btn"),mobileMenuList:document.querySelector(".header-menu"),artistsList:document.querySelector(".artists-list"),loader:document.querySelector(".loader"),moreBtn:document.querySelector(".moreButton"),feedBack:document.querySelector(".feed-back-container"),modal:document.querySelector(".modal"),closeModalBtn:document.querySelector(".modal__close-btn")};function b(t){return t.map(({_id:i,strArtist:r,strArtistThumb:o,strBiographyEN:e,genres:n})=>`<li class="artists--list__item">
+import{a as m,i as g,S as w,N as B,P as k,A as E}from"./assets/vendor-D3YsHSez.js";(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&o(a)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();async function p({currentPage:s=1,name:n="",sortName:r="",genre:o=""}={}){try{const a="https://sound-wave.b.goit.study/api"+"/artists",l={limit:8,page:s,...n&&{name:n},...r&&{sortName:r},...o&&{genre:o}};return(await m.get(a,{params:l})).data}catch(e){return g.error({message:`${e}`,position:"topRight"}),null}}async function P(){try{const r="https://sound-wave.b.goit.study/api"+"/feedbacks",o={limit:12};return(await m.get(r,{params:o})).data}catch(s){return g.error({message:`${s}`,position:"topRight"}),null}}let f=0;function S(s){f=s}function v(){return f}const i={mobileMenuOpen:document.getElementById("open-menu"),mobileMenuClose:document.getElementById("close-btn"),mobileMenuList:document.querySelector(".header-menu"),artistsList:document.querySelector(".artists-list"),loader:document.querySelector(".loader"),moreBtn:document.querySelector(".moreButton"),feedBack:document.querySelector(".swiper-wrapper"),modal:document.querySelector(".modal"),closeModalBtn:document.querySelector(".modal__close-btn")};function h(s){return s.map(({_id:n,strArtist:r,strArtistThumb:o,strBiographyEN:e,genres:t})=>`<li class="artists--list__item">
         <img
           class="artists--photo"
           src="${o}"
           alt="${r}"
         />
         <ul class="artists--genres">
-        ${n.map(a=>`<li class="artists--genres__item"><p>${a}</p></li>`).join("")}
+        ${t.map(a=>`<li class="artists--genres__item"><p>${a}</p></li>`).join("")}
         </ul>
         <h3 class="artists--name">${r}</h3>
         <p class="artists--descr">${e}</p>
-        <button class="artist--btn" data-id="${i}">
+        <button class="artist--btn" data-id="${n}">
           Learn More
           <svg class="hero-icon" >
             <use href="/img/sprite.svg#icon-right-arrow-full"></use>
           </svg>
         </button>
       </li>
-  `).join("")}function $(t){s.artistsList.innerHTML=b(t)}function E(t){s.artistsList.insertAdjacentHTML("beforeend",b(t))}function v(){s.loader.classList.add("visible")}function g(){s.loader.classList.remove("visible")}function L(){s.moreBtn.classList.add("visible")}function l(){s.moreBtn.classList.remove("visible")}function O(t){const r=`
-  <div class="swiper modal-product__slider">
-<div class="swiper-wrapper">
-  ${t.map(({_id:o,name:e,rating:n,descr:a})=>`<div class="swiper-slide" data-id="${o}">
-<p>${n}</p>
-<p>${a}</p>
-<p>${e}</p>
+  `).join("")}function $(s){i.artistsList.innerHTML=h(s)}function q(s){i.artistsList.insertAdjacentHTML("beforeend",h(s))}function b(){i.loader.classList.add("visible")}function y(){i.loader.classList.remove("visible")}function L(){i.moreBtn.classList.add("visible")}function d(){i.moreBtn.classList.remove("visible")}function O(s){const n=s.map(({_id:e,name:t,rating:a,descr:l})=>`<div class="swiper-slide" data-id="${e}">
 
-</div>`).join("")}
-</div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-pagination"></div>
-</div>`;s.feedBack.innerHTML=r,new M(".modal-product__slider",{modules:[h,w,B],navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0},autoplay:{delay:5e3}})}let d=1;async function S(){if(f()>d){v(),l();const t=await m(++d);g(),L(),E(t.artists)}else l();console.log(artists.artists)}function _(){s.mobileMenuClose.classList.remove("hidden"),s.mobileMenuOpen.classList.add("hidden"),s.mobileMenuList.classList.add("open"),s.mobileMenuClose.addEventListener("click",c),s.mobileMenuList.addEventListener("click",y),document.body.style.overflow="hidden"}function y(t){t.target.nodeName==="A"&&c()}function c(){document.body.style.overflow="",s.mobileMenuClose.classList.add("hidden"),s.mobileMenuOpen.classList.remove("hidden"),s.mobileMenuList.classList.remove("open"),s.mobileMenuClose.removeEventListener("click",c),s.mobileMenuList.removeEventListener("click",y)}s.mobileMenuOpen.addEventListener("click",_);async function A(){v();const t=await m();g(),$(t.artists),k(t.totalArtists/8),f()>1&&(L(),s.moreBtn.addEventListener("click",S));const i=await P();console.log(i.data),O(i.data)}A();
+
+ <div class="rating  value-${Math.round(a)}">
+      <div class="star-container">
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+<p class='feed-back--descr'>${l}</p>
+<p class='feed-back--name'>${t}</p>
+
+</div>`).join("");i.feedBack.innerHTML=n,new w(".modal-product__slider",{modules:[B,k,E],navigation:{nextEl:".custom-next",prevEl:".custom-prev"},pagination:{el:".swiper-pagination",clickable:!1,type:"custom"},autoplay:{delay:5e3},on:{init(){r(this.realIndex,this.slides.length),o(this)},slideChange(){r(this.realIndex,this.slides.length)}}});function r(e,t){const a=document.querySelectorAll(".swiper-pagination .bullet");a.forEach(l=>l.classList.remove("swiper-pagination-bullet-active")),e===0?a[0].classList.add("swiper-pagination-bullet-active"):e===t-1?a[2].classList.add("swiper-pagination-bullet-active"):a[1].classList.add("swiper-pagination-bullet-active")}function o(e){var t,a,l;(t=document.querySelector(".bullet.left"))==null||t.addEventListener("click",()=>{e.slideTo(0)}),(a=document.querySelector(".bullet.center"))==null||a.addEventListener("click",()=>{e.slideTo(Math.floor(e.slides.length/2))}),(l=document.querySelector(".bullet.right"))==null||l.addEventListener("click",()=>{e.slideTo(e.slides.length-1)})}}let u=1;async function A(){if(v()>u){b(),d();const s=await p({currentPage:++u});y(),L(),q(s.artists)}else d()}function C(){i.mobileMenuClose.classList.remove("hidden"),i.mobileMenuOpen.classList.add("hidden"),i.mobileMenuList.classList.add("open"),i.mobileMenuClose.addEventListener("click",c),i.mobileMenuList.addEventListener("click",M),document.body.style.overflow="hidden"}function M(s){s.target.nodeName==="A"&&c()}function c(){document.body.style.overflow="",i.mobileMenuClose.classList.add("hidden"),i.mobileMenuOpen.classList.remove("hidden"),i.mobileMenuList.classList.remove("open"),i.mobileMenuClose.removeEventListener("click",c),i.mobileMenuList.removeEventListener("click",M)}i.mobileMenuOpen.addEventListener("click",C);async function T(){b();const s=await p();y(),$(s.artists),S(s.totalArtists/8),v()>1&&(L(),i.moreBtn.addEventListener("click",A));const n=await P();O(n.data)}T();
 //# sourceMappingURL=index.js.map
