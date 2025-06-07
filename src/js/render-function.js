@@ -34,7 +34,7 @@ function createArtistsMarkup(artists) {
         <button class="artist--btn" data-id="${_id}">
           Learn More
           <svg class="hero-icon" >
-            <use href="/img/sprite.svg#icon-right-arrow-full"></use>
+            <use href="./img/sprite.svg#/img/sprite.svg#icon-bottom-arrow"></use>
           </svg>
         </button>
       </li>
