@@ -14,14 +14,11 @@ export async function handleMoreBtn() {
   if (getTotalPage() > page) {
     showLoader();
     hideLoadMoreButton();
-    const artists = await getArtists(++page);
+    const artists = await getArtists({ currentPage: ++page });
     hideLoader();
     showLoadMoreButton();
-
     addMoreBtnArtists(artists.artists);
   } else {
     hideLoadMoreButton();
   }
-
-  console.log(artists.artists);
 }

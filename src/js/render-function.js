@@ -3,6 +3,7 @@ import refs from './refs';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'css-star-rating/css/star-rating.min.css';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -65,7 +66,7 @@ export function hideLoadMoreButton() {
 }
 
 export function createFeedBack(feedBacks) {
-  const feedBackMarcup = feedBacks
+  const markup = feedBacks
     .map(
       ({
         _id,
@@ -73,38 +74,111 @@ export function createFeedBack(feedBacks) {
         rating,
         descr,
       }) => `<div class="swiper-slide" data-id="${_id}">
-<p>${rating}</p>
-<p>${descr}</p>
-<p>${name}</p>
+
+
+ <div class="rating  value-${Math.round(rating)}">
+      <div class="star-container">
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+        <div class="star">
+          <svg class="star-empty">
+            <use href="/img/sprite.svg#icon-star-empty"></use>
+          </svg>
+          <svg class="star-filled">
+            <use href="/img/sprite.svg#icon-star-full"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+<p class='feed-back--descr'>${descr}</p>
+<p class='feed-back--name'>${name}</p>
 
 </div>`
     )
     .join('');
 
-  const markup = `
-  <div class="swiper modal-product__slider">
-<div class="swiper-wrapper">
-  ${feedBackMarcup}
-</div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-pagination"></div>
-</div>`;
   refs.feedBack.innerHTML = markup;
 
   new Swiper('.modal-product__slider', {
     modules: [Navigation, Pagination, Autoplay],
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
     },
     pagination: {
       el: '.swiper-pagination',
-      clickable: true,
+      clickable: false,
+      type: 'custom',
     },
     autoplay: {
       delay: 5000,
     },
+    on: {
+      init() {
+        updateCustomBullets(this.realIndex, this.slides.length);
+        setupBulletClicks(this);
+      },
+      slideChange() {
+        updateCustomBullets(this.realIndex, this.slides.length);
+      },
+    },
   });
+
+  function updateCustomBullets(index, total) {
+    const bullets = document.querySelectorAll('.swiper-pagination .bullet');
+    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
+
+    if (index === 0) {
+      bullets[0].classList.add('swiper-pagination-bullet-active');
+    } else if (index === total - 1) {
+      bullets[2].classList.add('swiper-pagination-bullet-active');
+    } else {
+      bullets[1].classList.add('swiper-pagination-bullet-active');
+    }
+  }
+
+  function setupBulletClicks(swiperInstance) {
+    document.querySelector('.bullet.left')?.addEventListener('click', () => {
+      swiperInstance.slideTo(0);
+    });
+
+    document.querySelector('.bullet.center')?.addEventListener('click', () => {
+      swiperInstance.slideTo(Math.floor(swiperInstance.slides.length / 2));
+    });
+
+    document.querySelector('.bullet.right')?.addEventListener('click', () => {
+      swiperInstance.slideTo(swiperInstance.slides.length - 1);
+    });
+  }
 }

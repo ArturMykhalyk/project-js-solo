@@ -2,12 +2,131 @@
     padding-top: 64px;
     padding-bottom: 64px;
     scroll-margin-top: 64px;
+
+
+}
+
+.star-container {
+    gap: 4px;
+    margin-bottom: 32px;
+}
+
+.star-container .star {
+    width: 20px;
+    height: 19px;
+}
+
+.feed-back--descr {
+    font-family: "Epilogue", sans-serif;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+.feed-back--name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+
+.swiper-wrapper {
+    margin-bottom: 16px;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.swiper-pagination .bullet {
+    width: 8px;
+    height: 8px;
+    background: #444;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.swiper-pagination .bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+.my-slider-controls {
+    display: none;
 }
 
 
 
+
+
 /* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .my-slider-controls {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        top: -140px;
+    }
+
+    .custom-prev, .custom-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: #060307;
+        border-radius: 8px;
+        padding: 12px;
+        width: 48px;
+        height: 48px;
+
+        &:disabled {
+            opacity: 0.3;
+        }
+    }
+
+    .custom-prev {
+        transform: rotate(90deg);
+    }
+
+    .more-btn-icon {
+        fill: #fff
+    }
+
+    .custom-next {
+        transform: rotate(-90deg);
+    }
+
+
+    .feed-back--descr {
+        font-size: 26px;
+        width: 518px;
+
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 0;
+    }
+
+    .swiper-pagination {
+
+        margin-top: 0;
+
+    }
+
+
+}
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
@@ -16,4 +135,15 @@
         padding-bottom: 112px;
         scroll-margin-top: 72px;
     }
+
+    .feed-back--descr {
+        font-size: 32px;
+        width: 866px;
+
+
+
+    }
+
+
+
 }

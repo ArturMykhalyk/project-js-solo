@@ -6,6 +6,7 @@
 */
 /* Common styles */
 @import url('./modern-normalize.css');
+@import 'css-star-rating/css/star-rating.min.css';
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');

@@ -29,7 +29,6 @@ async function initMainPage() {
   }
 
   const feedBacks = await getFeedBack();
-  console.log(feedBacks.data);
   createFeedBack(feedBacks.data);
 }
 
