@@ -80,42 +80,42 @@ export function createFeedBack(feedBacks) {
       <div class="star-container">
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/svg-icon/star-empty.svg"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/svg-icon/star-full.svg"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/svg-icon/star-empty.svg"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/svg-icon/star-full.svg"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/svg-icon/star-empty.svg"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/svg-icon/star-full.svg"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/svg-icon/star-empty.svg"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/svg-icon/star-full.svg"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/svg-icon/star-empty.svg"></use>
+            <use href="/img/sprite.svg#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/svg-icon/star-full.svg"></use>
+            <use href="/img/sprite.svg#icon-star-full"></use>
           </svg>
         </div>
       </div>
