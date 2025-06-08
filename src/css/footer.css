@@ -1,0 +1,192 @@
+.footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+}
+
+.footer-content-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+
+
+.footer-logo {
+    fill: #764191;
+    width: 84px;
+    height: 36px;
+}
+
+
+.footer-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.footer-menu-link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.footer-social-content {
+    position: relative;
+}
+
+.footer-social-content::before {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 280px;
+
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+
+
+.footer-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+
+}
+
+
+
+.footer-instagram-logo {
+    stroke: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.footer-facebook-logo,
+
+.footer-youtube-logo {
+    fill: #fff;
+    width: 40px;
+    height: 40px;
+
+
+}
+
+.footer-lic {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+
+    .footer {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+
+
+    .footer__container {
+        gap: 80px;
+    }
+
+
+
+
+
+    .footer-logo {
+        width: 116px;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+
+    .footer-menu-list {
+
+        flex-direction: row;
+        gap: 32px;
+
+    }
+
+    .footer-social-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
+    }
+
+    .footer-social-content::before {
+        content: '';
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+
+        top: -32px;
+        left: 50%;
+
+    }
+
+
+
+    .footer-social-list {
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+
+
+
+    .footer-instagram-logo {
+        stroke: #fff;
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-facebook-logo,
+
+    .footer-youtube-logo {
+        fill: #fff;
+        width: 40px;
+        height: 40px;
+
+
+    }
+
+    .footer-lic {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #fff;
+        text-align: center;
+    }
+
+
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {}
