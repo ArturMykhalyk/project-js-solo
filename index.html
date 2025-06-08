@@ -16,7 +16,7 @@
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-D3YsHSez.js">
     <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-F2hTJJT3.css">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-DhoN5KJH.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-CbgWeNrf.css">
   </head>
   <body>
     <header class="header">
@@ -213,8 +213,16 @@
 
     <div class="modal">
   <div class="modal__content">
-    <button class="modal__close-btn" type="button">X</button>
-    <div class="modal-artist"></div>
+    <button class="modal__close-btn" type="button">
+      <svg class="close-icon-modal">
+        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+    <div class="modal-artist">
+      <div class="modal-biography"></div>
+      <p class="modal-albums-title">Albums</p>
+      <ul class="modal-albums"></ul>
+    </div>
   </div>
 </div>
 
