@@ -2,7 +2,7 @@
 import refs from './refs';
 export function openModal() {
   refs.modal.classList.add('modal--is-open');
-
+  document.body.style.overflow = 'hidden';
   document.addEventListener('keydown', closeModalOnEsc);
 
   window.addEventListener('click', clickNoModal);
@@ -11,6 +11,7 @@ export function openModal() {
 }
 
 function closeModal() {
+  document.body.style.overflow = '';
   refs.modal.classList.remove('modal--is-open');
   document.removeEventListener('keydown', closeModalOnEsc);
   window.removeEventListener('click', clickNoModal);

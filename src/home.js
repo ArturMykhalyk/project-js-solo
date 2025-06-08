@@ -1,6 +1,6 @@
 import { getArtists, getFeedBack } from './js/artists-api';
 import { getTotalPage, setTotalPage } from './js/constants';
-import { handleMoreBtn } from './js/handlers';
+import { handleLearnMoreArtist, handleMoreBtn } from './js/handlers';
 import { handleOpenMobileMenu } from './js/mobile-menu';
 import { openModal } from './js/modal';
 import refs from './js/refs';
@@ -15,6 +15,7 @@ import {
 // openModal();
 
 refs.mobileMenuOpen.addEventListener('click', handleOpenMobileMenu);
+refs.artistsList.addEventListener('click', handleLearnMoreArtist);
 async function initMainPage() {
   showLoader();
   const artists = await getArtists();

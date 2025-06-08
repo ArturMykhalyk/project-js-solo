@@ -1,7 +1,10 @@
-import { getArtists } from './artists-api';
+import { getArtistId, getArtistIdAlbums, getArtists } from './artists-api';
 import { getTotalPage } from './constants';
+import { openModal } from './modal';
 import {
   addMoreBtnArtists,
+  createAllAlbums,
+  createModalBiography,
   hideLoader,
   hideLoadMoreButton,
   showLoader,
@@ -21,4 +24,21 @@ export async function handleMoreBtn() {
   } else {
     hideLoadMoreButton();
   }
+}
+
+export async function handleLearnMoreArtist(e) {
+  if (e.target.className !== 'artist--btn') {
+    return;
+  }
+
+  openModal();
+  const genres = e.target.parentElement.children[1].innerHTML;
+  const id = e.target.dataset.id;
+
+  const artistInfo = await getArtistId(id);
+  createModalBiography(artistInfo, genres);
+  const artistAlbumInfo = await getArtistIdAlbums(id);
+  createAllAlbums(artistAlbumInfo.albumsList);
+  console.log('artist', artistInfo);
+  console.log('album', artistAlbumInfo.albumsList);
 }

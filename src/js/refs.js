@@ -10,4 +10,6 @@ export default {
   feedBack: document.querySelector('.swiper-wrapper'),
   modal: document.querySelector('.modal'),
   closeModalBtn: document.querySelector('.modal__close-btn'),
+  modalArtistBiography: document.querySelector('.modal-biography'),
+  modalArtisTAlbums: document.querySelector('.modal-albums'),
 };

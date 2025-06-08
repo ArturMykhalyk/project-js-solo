@@ -182,3 +182,71 @@ export function createFeedBack(feedBacks) {
     });
   }
 }
+
+export function createModalBiography(
+  {
+    intDiedYear,
+    intFormedYear,
+    intMembers,
+    strGender,
+    strArtist,
+    strArtistThumb,
+    strBiographyEN,
+    strCountry,
+  },
+  genres
+) {
+  const markup = `
+   <p class="modal-biography__title">${strArtist}</p>
+        <img class="modal-biography__photo" src="${strArtistThumb}" alt="${strArtist}" />
+        <p class="modal-biography___years">Years active</br> <span>${intFormedYear}-${
+    intDiedYear ?? 'present'
+  }</span></p>
+        <p class="modal-biography___sex">Sex</br> <span>${strGender}</span></p>
+        <p class="modal-biography___members">Members</br> <span>${intMembers}</span></p>
+        <p class="modal-biography___country">Country</br> <span>${strCountry}</span></p>
+        <p class="modal-biography___biography">Biography</br> <span>${strBiographyEN}</span></p>
+        <ul class="modal-biography__genre-list">${genres}</ul>`;
+  refs.modalArtistBiography.innerHTML = markup;
+}
+export function createAllAlbums(albumsList) {
+  refs.modalArtisTAlbums.innerHTML = albumsList
+    .map(album => renderAlbumMarkup(album))
+    .join('');
+}
+
+function renderAlbumMarkup(album) {
+  const tracksMarkup = album.tracks
+    .map(track => {
+      const minutes = Math.floor(track.intDuration / 60000);
+      const seconds = Math.floor((track.intDuration % 60000) / 1000)
+        .toString()
+        .padStart(2, '0');
+      return `
+      <li class="modal-track-item">
+        <span class="track-name">${track.strTrack}</span>
+        <span class="track-time">${minutes}:${seconds}</span>
+        <a class="track-link" href="${track.movie}">${
+        track.movie ? '🔊' : ''
+      }</a>
+      </li>
+    `;
+    })
+    .join('');
+
+  const markup = `
+    <li class="modal-album-item">
+      <h3 class="modal-album-title">${album.strAlbum}</h3>
+      <ul class="modal-track-list">
+            <li class="modal-track-item">
+        <p class="modal-track-name-title track-name">Track</p>
+        <p class="modal-track-time-title track-time">Time</p>
+        <p class="modal-track-link-title track-link">Link</p>
+      </li>
+            ${tracksMarkup}
+      </ul>
+    </li>
+  `;
+
+  return markup;
+}
