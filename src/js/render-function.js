@@ -198,15 +198,21 @@ export function createModalBiography(
   },
   genres
 ) {
+  const markupYears =
+    intFormedYear || intDiedYear
+      ? `      ${intFormedYear ?? 'last'}-${intDiedYear ?? 'present'}`
+      : 'information missing';
+
   const markup = `
    <p class="modal-biography__title">${strArtist}</p>
    <div class="modal-bbiography-desktop">     
    <img class="modal-biography__photo" src="${strArtistThumb}" alt="${strArtist}" />
         <div class="modal-biography__info">
         <div class="modal-biography___content">
-        <p class="modal-biography___years">Years active</br> <span>${intFormedYear}-${
-    intDiedYear ?? 'present'
-  }</span></p>
+        <p class="modal-biography___years">Years active</br> <span>
+        
+        ${markupYears}
+     </span></p>
         <p class="modal-biography___sex">Sex</br> <span>${strGender}</span></p>
         <p class="modal-biography___members">Members</br> <span>${intMembers}</span></p>
         <p class="modal-biography___country">Country</br> <span>${strCountry}</span></p>
