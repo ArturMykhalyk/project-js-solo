@@ -7,6 +7,8 @@ import 'css-star-rating/css/star-rating.min.css';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
+import spriteUrl from './sprite';
+
 function createArtistsMarkup(artists) {
   return artists
     .map(
@@ -34,7 +36,7 @@ function createArtistsMarkup(artists) {
         <button class="artist--btn" data-id="${_id}">
           Learn More
           <svg class="hero-icon" >
-            <use href="./img/sprite.svg#icon-bottom-arrow"></use>
+            <use href="${spriteUrl}#icon-right-arrow-full"></use>
           </svg>
         </button>
       </li>
