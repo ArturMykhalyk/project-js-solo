@@ -103,9 +103,7 @@
 .loader {
 
     margin: 10px auto;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+
     width: 40px;
     aspect-ratio: 1;
     outline: 2px solid #fff;
