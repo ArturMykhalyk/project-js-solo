@@ -99,6 +99,11 @@
     text-align: center;
 }
 
+.footer-social-link {
+    display: block;
+    height: 40px;
+}
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
 
