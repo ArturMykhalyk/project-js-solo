@@ -1,6 +1,11 @@
-import { getArtists, getFeedBack } from './js/artists-api';
+import { getArtists, getFeedBack, getGenres } from './js/artists-api';
 import { getTotalPage, setTotalPage } from './js/constants';
-import { handleLearnMoreArtist, handleMoreBtn } from './js/handlers';
+import {
+  handleArtistsFilter,
+  handleLearnMoreArtist,
+  handleMoreBtn,
+  handleResetFilter,
+} from './js/handlers';
 import { handleOpenMobileMenu } from './js/mobile-menu';
 import { openModal } from './js/modal';
 import refs from './js/refs';
@@ -8,6 +13,7 @@ import refs from './js/refs';
 import {
   createArtists,
   createFeedBack,
+  createGenre,
   hideLoader,
   showLoader,
   showLoadMoreButton,
@@ -17,6 +23,11 @@ import {
 refs.mobileMenuOpen.addEventListener('click', handleOpenMobileMenu);
 refs.artistsList.addEventListener('click', handleLearnMoreArtist);
 async function initMainPage() {
+  // if (window.innerWidth >= 1440) {
+  //   // handleArtistsFilter();
+  // }
+  const genre = await getGenres();
+  createGenre(genre);
   showLoader(refs.loader);
   const artists = await getArtists();
   hideLoader(refs.loader);
@@ -34,3 +45,6 @@ async function initMainPage() {
 }
 
 initMainPage();
+
+refs.artistsFilterBtn.addEventListener('click', handleArtistsFilter);
+refs.resetFilter.addEventListener('click', handleResetFilter);

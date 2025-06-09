@@ -2,13 +2,71 @@
   <div class="container artists-container">
     <h2 class="artists-title">Artists</h2>
     <h3 class="artists-subtitle">Explore Your New Favorite Artists</h3>
-    <ul class="artists-list"></ul>
-    <span class="loader"></span>
-    <button class="moreButton">
-      Load More
-      <svg class="more-btn-icon">
-        <use href="/img/sprite.svg#icon-bottom-arrow"></use>
-      </svg>
-    </button>
+    <div class="artists-container-content">
+      <div class="artists-filters">
+        <div class="arists-first-content">
+          <p class="artists-filters__title">Filters</p>
+          <button class="artists-filters-btn___reset">Reset</button>
+        </div>
+
+        <button class="artists-filters-btn">Search and Filters</button>
+
+        <div class="artists-filters-content">
+          <div class="artists-filters-search-box">
+            <svg class="search-icon icon">
+              <use href="/img/sprite.svg#icon-search"></use>
+            </svg>
+            <input name="search" type="text" placeholder="Search" />
+          </div>
+
+          <div class="custom-sort-dropdown">
+            <div class="dropdown-selected-sort">
+              <p class="dropdown-selected-sort-text">Sorting</p>
+              <svg class="sorting-icon icon">
+                <use href="/img/sprite.svg#icon-chevron-down-filter"></use>
+              </svg>
+            </div>
+            <ul class="dropdown-options-sort">
+              <li data-value="default">Default</li>
+              <li data-value="asc">A-Z</li>
+              <li data-value="desc">Z-A</li>
+            </ul>
+          </div>
+
+          <div class="genre-dropdown">
+            <div class="genre-dropdown-title">
+              <p class="genre-dropdown-title-text">Genre</p>
+              <svg class="genre-icon icon">
+                <use href="/img/sprite.svg#icon-chevron-down-filter"></use>
+              </svg>
+            </div>
+            <ul class="genre-dropdown-options-genre"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="artists-content">
+        <ul class="artists-list"></ul>
+        <div class="filter-not-found">
+          <svg class="info-icon icon">
+            <use href="/img/sprite.svg#icon-error-circle-filter"></use>
+          </svg>
+
+          <p class="not-found-title">Silence on the stage…</p>
+          <p class="not-found-descr">
+            Looks like no artists match your filters.
+            <br />
+            Try changing them or hit “Reset Filters” to bring back the beat.
+          </p>
+          <button class="not-found-btn-reset">Reset filters</button>
+        </div>
+        <span class="loader"></span>
+        <button class="moreButton">
+          Load More
+          <svg class="more-btn-icon">
+            <use href="/img/sprite.svg#icon-bottom-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>

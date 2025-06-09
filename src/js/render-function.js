@@ -267,3 +267,13 @@ function renderAlbumMarkup(album) {
 
   return markup;
 }
+
+export function createGenre(genre) {
+  const markup = genre
+    .map(
+      genr =>
+        `  <li data-value="${genr.genre.toLowerCase()}">${genr.genre}</li>`
+    )
+    .join('');
+  refs.customGenreDropBlock.innerHTML = markup;
+}
