@@ -200,15 +200,20 @@ export function createModalBiography(
 ) {
   const markup = `
    <p class="modal-biography__title">${strArtist}</p>
-        <img class="modal-biography__photo" src="${strArtistThumb}" alt="${strArtist}" />
+   <div class="modal-bbiography-desktop">     
+   <img class="modal-biography__photo" src="${strArtistThumb}" alt="${strArtist}" />
+        <div class="modal-biography__info">
+        <div class="modal-biography___content">
         <p class="modal-biography___years">Years active</br> <span>${intFormedYear}-${
     intDiedYear ?? 'present'
   }</span></p>
         <p class="modal-biography___sex">Sex</br> <span>${strGender}</span></p>
         <p class="modal-biography___members">Members</br> <span>${intMembers}</span></p>
         <p class="modal-biography___country">Country</br> <span>${strCountry}</span></p>
+        </div>
         <p class="modal-biography___biography">Biography</br> <span>${strBiographyEN}</span></p>
-        <ul class="modal-biography__genre-list">${genres}</ul>`;
+        <ul class="modal-biography__genre-list">${genres}</ul>
+        </div></div>`;
   refs.modalArtistBiography.innerHTML = markup;
 }
 export function createAllAlbums(albumsList) {
