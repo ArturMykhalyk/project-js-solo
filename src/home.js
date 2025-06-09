@@ -17,9 +17,9 @@ import {
 refs.mobileMenuOpen.addEventListener('click', handleOpenMobileMenu);
 refs.artistsList.addEventListener('click', handleLearnMoreArtist);
 async function initMainPage() {
-  showLoader();
+  showLoader(refs.loader);
   const artists = await getArtists();
-  hideLoader();
+  hideLoader(refs.loader);
   createArtists(artists.artists);
 
   setTotalPage(artists.totalArtists / 8);

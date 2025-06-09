@@ -54,11 +54,11 @@ export function addMoreBtnArtists(artists) {
     createArtistsMarkup(artists)
   );
 }
-export function showLoader() {
-  refs.loader.classList.add('visible');
+export function showLoader(refs) {
+  refs.classList.add('visible');
 }
-export function hideLoader() {
-  refs.loader.classList.remove('visible');
+export function hideLoader(refs) {
+  refs.classList.remove('visible');
 }
 export function showLoadMoreButton() {
   refs.moreBtn.classList.add('visible');
