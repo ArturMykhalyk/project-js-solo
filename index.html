@@ -16,14 +16,14 @@
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-D3YsHSez.js">
     <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-F2hTJJT3.css">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-wevz7Xyp.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-xsItGTZT.css">
   </head>
   <body>
     <header class="header">
   <div class="container header__container">
     <a class="link-logo" href="index.html">
       <svg class="logo-header">
-        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-logo"></use>
+        <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-logo"></use>
       </svg>
     </a>
 
@@ -43,13 +43,13 @@
 
     <button class="burger-btn" id="open-menu" type="button">
       <svg class="burger-icon">
-        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-burger"></use>
+        <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-burger"></use>
       </svg>
     </button>
 
     <button class="close-btn hidden" id="close-btn" type="button">
       <svg class="close-icon">
-        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-close-menu"></use>
+        <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-close-menu"></use>
       </svg>
     </button>
   </div>
@@ -69,7 +69,7 @@
       <a class="hero-btn" href="#artists-section">
         Explore Artists
         <svg class="hero-icon">
-          <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-right-arrow"></use>
+          <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-right-arrow"></use>
         </svg>
       </a>
     </div>
@@ -81,14 +81,72 @@
   <div class="container artists-container">
     <h2 class="artists-title">Artists</h2>
     <h3 class="artists-subtitle">Explore Your New Favorite Artists</h3>
-    <ul class="artists-list"></ul>
-    <span class="loader"></span>
-    <button class="moreButton">
-      Load More
-      <svg class="more-btn-icon">
-        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-bottom-arrow"></use>
-      </svg>
-    </button>
+    <div class="artists-container-content">
+      <div class="artists-filters">
+        <div class="arists-first-content">
+          <p class="artists-filters__title">Filters</p>
+          <button class="artists-filters-btn___reset">Reset</button>
+        </div>
+
+        <button class="artists-filters-btn">Search and Filters</button>
+
+        <div class="artists-filters-content">
+          <div class="artists-filters-search-box">
+            <svg class="search-icon icon">
+              <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-search"></use>
+            </svg>
+            <input name="search" type="text" placeholder="Search" />
+          </div>
+
+          <div class="custom-sort-dropdown">
+            <div class="dropdown-selected-sort">
+              <p class="dropdown-selected-sort-text">Sorting</p>
+              <svg class="sorting-icon icon">
+                <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-chevron-down-filter"></use>
+              </svg>
+            </div>
+            <ul class="dropdown-options-sort">
+              <li data-value="default">Default</li>
+              <li data-value="asc">A-Z</li>
+              <li data-value="desc">Z-A</li>
+            </ul>
+          </div>
+
+          <div class="genre-dropdown">
+            <div class="genre-dropdown-title">
+              <p class="genre-dropdown-title-text">Genre</p>
+              <svg class="genre-icon icon">
+                <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-chevron-down-filter"></use>
+              </svg>
+            </div>
+            <ul class="genre-dropdown-options-genre"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="artists-content">
+        <ul class="artists-list"></ul>
+        <div class="filter-not-found">
+          <svg class="info-icon icon">
+            <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-error-circle-filter"></use>
+          </svg>
+
+          <p class="not-found-title">Silence on the stage…</p>
+          <p class="not-found-descr">
+            Looks like no artists match your filters.
+            <br />
+            Try changing them or hit “Reset Filters” to bring back the beat.
+          </p>
+          <button class="not-found-btn-reset">Reset filters</button>
+        </div>
+        <span class="loader"></span>
+        <button class="moreButton">
+          Load More
+          <svg class="more-btn-icon">
+            <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-bottom-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -123,7 +181,7 @@
 
     <div class="about-content">
       <svg class="about-logo">
-        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-logomin"></use>
+        <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-logomin"></use>
       </svg>
       <h2 class="about-title">About ArtistsHub</h2>
       <p class="about-descr">
@@ -143,12 +201,12 @@
       <div class="my-slider-controls">
         <button class="custom-prev">
           <svg class="more-btn-icon">
-            <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-bottom-arrow"></use>
+            <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-bottom-arrow"></use>
           </svg>
         </button>
         <button class="custom-next">
           <svg class="more-btn-icon">
-            <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-bottom-arrow"></use>
+            <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-bottom-arrow"></use>
           </svg>
         </button>
       </div>
@@ -167,7 +225,7 @@
     <div class="footer-content-nav">
       <a class="footer-link-logo" href="index.html">
         <svg class="footer-logo" width="84" heigth="36">
-          <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-logo"></use>
+          <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-logo"></use>
         </svg>
       </a>
 
@@ -195,7 +253,7 @@
             target="_blank"
           >
             <svg class="footer-instagram-logo" width="32" heigth="32">
-              <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-instagram"></use></svg
+              <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-instagram"></use></svg
           ></a>
         </li>
         <li class="footer-social-item">
@@ -206,7 +264,7 @@
             target="_blank"
           >
             <svg class="footer-facebook-logo" width="32" heigth="32">
-              <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-facebook"></use></svg
+              <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-facebook"></use></svg
           ></a>
         </li>
         <li class="footer-social-item">
@@ -217,7 +275,7 @@
             target="_blank"
           >
             <svg class="footer-youtube-logo" width="32" heigth="32">
-              <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-youtube"></use></svg
+              <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-youtube"></use></svg
           ></a>
         </li>
       </ul>
@@ -230,7 +288,7 @@
   <div class="modal__content">
     <button class="modal__close-btn" type="button">
       <svg class="close-icon-modal">
-        <use href="/project-js-solo/assets/sprite-oGdn5a-q.svg#icon-close-menu"></use>
+        <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-close-menu"></use>
       </svg>
     </button>
     <span class="modal-loader"></span>
