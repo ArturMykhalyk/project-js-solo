@@ -347,7 +347,9 @@
 
 .genre-dropdown-options-genre {
 
-
+    scrollbar-width: thin;
+    scrollbar-color: #e0e0e0 #060307;
+    scroll-behavior: smooth;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -452,6 +454,7 @@
     .moreButton {
         width: 340px;
         margin: 0 auto;
+        margin-top: 48px;
     }
 
     .artists-filters-btn {
@@ -519,7 +522,7 @@
     .artists-filters-btn {
         margin-left: 0;
         width: 304px;
-        /* display: none; */
+        display: none;
     }
 
     .artists-filters-content {

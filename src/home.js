@@ -23,9 +23,12 @@ import {
 refs.mobileMenuOpen.addEventListener('click', handleOpenMobileMenu);
 refs.artistsList.addEventListener('click', handleLearnMoreArtist);
 async function initMainPage() {
-  // if (window.innerWidth >= 1440) {
-  //   // handleArtistsFilter();
-  // }
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth >= 1440) {
+      refs.artistsFilterBtn.dispatchEvent(new Event('click'));
+    }
+  });
+
   const genre = await getGenres();
   createGenre(genre);
   showLoader(refs.loader);
