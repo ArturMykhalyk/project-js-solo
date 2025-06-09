@@ -165,6 +165,12 @@
   font-size: 12px;
 }
 
+.track-link-youtube {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+}
+
 .modal-track-item .track-time {
   flex: 1;
   text-align: center;
@@ -174,6 +180,7 @@
 
 .modal-track-item .track-link {
   flex: 0 0 40px;
+  height: 24px;
   text-align: center;
 }
 

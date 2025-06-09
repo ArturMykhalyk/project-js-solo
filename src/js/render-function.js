@@ -82,42 +82,42 @@ export function createFeedBack(feedBacks) {
       <div class="star-container">
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${spriteUrl}#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${spriteUrl}#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${spriteUrl}#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${spriteUrl}#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${spriteUrl}#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${spriteUrl}#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${spriteUrl}#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${spriteUrl}#icon-star-full"></use>
           </svg>
         </div>
         <div class="star">
           <svg class="star-empty">
-            <use href="/img/sprite.svg#icon-star-empty"></use>
+            <use href="${spriteUrl}#icon-star-empty"></use>
           </svg>
           <svg class="star-filled">
-            <use href="/img/sprite.svg#icon-star-full"></use>
+            <use href="${spriteUrl}#icon-star-full"></use>
           </svg>
         </div>
       </div>
@@ -229,7 +229,11 @@ function renderAlbumMarkup(album) {
         <span class="track-name">${track.strTrack}</span>
         <span class="track-time">${minutes}:${seconds}</span>
         <a class="track-link" href="${track.movie}">${
-        track.movie ? '🔊' : ''
+        track.movie
+          ? `<svg class="track-link-youtube">
+            <use href="${spriteUrl}#icon-youtube"></use>
+          </svg>`
+          : ''
       }</a>
       </li>
     `;
