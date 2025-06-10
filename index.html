@@ -14,9 +14,9 @@
     />
 
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-D3YsHSez.js">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-F2hTJJT3.css">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-2zGh6PQl.css">
+    <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-CLxGNKPO.js">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-BCR7kFK8.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-B5mmXShQ.css">
   </head>
   <body>
     <header class="header">
@@ -125,6 +125,14 @@
       </div>
       <div class="artists-content">
         <ul class="artists-list"></ul>
+        <span class="loader"></span>
+        <button class="moreButton">
+          Load More
+          <svg class="more-btn-icon">
+            <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-bottom-arrow"></use>
+          </svg>
+        </button>
+        <div id="tui-pagination-container" class="tui-pagination"></div>
         <div class="filter-not-found">
           <svg class="info-icon icon">
             <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-error-circle-filter"></use>
@@ -138,13 +146,6 @@
           </p>
           <button class="not-found-btn-reset">Reset filters</button>
         </div>
-        <span class="loader"></span>
-        <button class="moreButton">
-          Load More
-          <svg class="more-btn-icon">
-            <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-bottom-arrow"></use>
-          </svg>
-        </button>
       </div>
     </div>
   </div>
