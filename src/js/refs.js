@@ -3,6 +3,7 @@
 export default {
   mobileMenuOpen: document.getElementById('open-menu'),
   mobileMenuClose: document.getElementById('close-btn'),
+  headerElem: document.querySelector('.header'),
   mobileMenuList: document.querySelector('.header-menu'),
   artistsList: document.querySelector('.artists-list'),
   loader: document.querySelector('.loader'),
@@ -31,4 +32,5 @@ export default {
   notFoundFilter: document.querySelector('.filter-not-found'),
   notFoundBtnReset: document.querySelector('.not-found-btn-reset'),
   searchIconBtn: document.querySelector('.search-icon'),
+  paginationContainer: document.getElementById('tui-pagination-container'),
 };

@@ -5,6 +5,7 @@ import {
   handleLearnMoreArtist,
   handleMoreBtn,
   handleResetFilter,
+  insertLastPageButton,
 } from './js/handlers';
 import { handleOpenMobileMenu } from './js/mobile-menu';
 import { openModal } from './js/modal';
@@ -18,6 +19,7 @@ import {
   showLoader,
   showLoadMoreButton,
 } from './js/render-function';
+import { pagination } from './js/handlers';
 // openModal();
 
 refs.mobileMenuOpen.addEventListener('click', handleOpenMobileMenu);
@@ -35,8 +37,9 @@ async function initMainPage() {
   const artists = await getArtists();
   hideLoader(refs.loader);
   createArtists(artists.artists);
-
+  pagination.reset(artists.totalArtists);
   setTotalPage(artists.totalArtists / 8);
+  insertLastPageButton();
 
   if (getTotalPage() > 1) {
     showLoadMoreButton();

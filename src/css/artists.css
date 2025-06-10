@@ -437,8 +437,150 @@
     border: none;
 }
 
+/* Контейнер пагінації */
+.artists-content .tui-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+
+    gap: 4px;
+    margin: 20px 0;
+
+    background-color: transparent;
+}
+
+/* Кнопки сторінок */
+.custom-page {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    padding: 10px 12px;
+
+    height: 47px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.custom-page:hover {
+    background: #333;
+    color: white;
+}
+
+/* Активна сторінка */
+.custom-page.active {
+    border-radius: 12px;
+
+    box-shadow: 0 1px 2px 0 rgba(6, 3, 7, 0.05), inset 0 -2px 1px 0 rgba(6, 3, 7, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Стрілки "←" і "→" */
+.custom-move {
+    border: 1px solid rgba(6, 3, 7, 0.15);
+    border-radius: 8px;
+
+    width: 24px;
+    height: 24px;
+}
+
+.tui-pagination .first, .tui-pagination .last {
+    display: none !important;
+}
+
+.custom-move .custom-move-icon {
+    fill: #fff;
+    width: 24px;
+    height: 25px;
+}
+
+.prev .custom-move-icon {
+    transform: rotate(90deg);
+}
+
+/* .first .custom-move-icon {
+    fill: transparent;
+} */
+
+
+.next .custom-move-icon {
+    transform: rotate(-90deg);
+}
+
+.custom-move:hover {
+    background-color: #333;
+}
+
+/* Вимкнені стрілки */
+.custom-disabled {
+    color: #555;
+    padding: 6px 10px;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Кнопка "..." */
+.custom-more {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    align-content: center;
+    width: 16px;
+    height: 47px;
+}
+
+.artists-content .tui-pagination .tui-first-child,
+.artists-content .tui-pagination .tui-last-child {
+    border: none;
+}
+
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+    .artists-content .tui-pagination {
+        justify-content: center;
+    }
+
+    .custom-page {
+        padding: 10px 24px;
+    }
+
+    /* Кнопка "..." */
+    .custom-more {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #fff;
+        padding: 10px 24px;
+        width: 59px;
+        height: 47px;
+    }
+
+    /* Кнопки сторінок */
+    .custom-page {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #fff;
+        padding: 10px 24px;
+
+        height: 47px;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Стрілки "←" і "→" */
+    .custom-move {
+        border: 1px solid rgba(6, 3, 7, 0.15);
+        border-radius: 8px;
+        padding: 12px;
+        width: 48px;
+        height: 48px;
+    }
 
     .artists-list {
         gap: 32px;
