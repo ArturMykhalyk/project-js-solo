@@ -14,9 +14,9 @@
     />
 
     <script type="module" crossorigin src="/project-js-solo/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-CLxGNKPO.js">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-BCR7kFK8.css">
-    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-Di1uyBgJ.css">
+    <link rel="modulepreload" crossorigin href="/project-js-solo/assets/vendor-DjVtRUFz.js">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/vendor-B7P7D9Us.css">
+    <link rel="stylesheet" crossorigin href="/project-js-solo/assets/index-BpXjQOqM.css">
   </head>
   <body>
     <header class="header">
@@ -226,6 +226,9 @@
         <span class="bullet right" data-slide="last"></span>
       </div>
     </div>
+    <div class="feed-back-btn-container">
+      <button class="feed-back-btn">Leave feedback</button>
+    </div>
   </div>
 </section>
 
@@ -307,6 +310,39 @@
       <p class="modal-albums-title">Albums</p>
       <ul class="modal-albums"></ul>
     </div>
+  </div>
+</div>
+
+    <div class="modal-feed">
+  <div class="modal__feed-content">
+    <button class="modal__feed-close-btn" type="button">
+      <svg class="modal__feed-close-icon">
+        <use href="/project-js-solo/assets/sprite-8Fw0A7zS.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+    <p class="modal__feed-title">Submit feedback</p>
+    <form class="modal__feed-form">
+      <label for="name" class="modal__feed-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="modal__feed-input"
+        placeholder="Your name"
+      />
+
+      <label for="message" class="modal__feed-label">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        class="modal__feed-textarea"
+        placeholder="Type your message..."
+      ></textarea>
+
+      <div class="modal__feed-rating"></div>
+
+      <button type="submit" class="modal__feed-submit-btn">Submit</button>
+    </form>
   </div>
 </div>
 
