@@ -40,6 +40,12 @@ if (window.innerWidth < 1440) {
 if (window.innerWidth < 768) {
   paginationOptions.visiblePages = 1;
 }
+export function handleScrollBtn() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
 
 const valueFilters = {
   currentPage: 1,

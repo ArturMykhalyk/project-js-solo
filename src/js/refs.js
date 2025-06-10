@@ -33,4 +33,5 @@ export default {
   notFoundBtnReset: document.querySelector('.not-found-btn-reset'),
   searchIconBtn: document.querySelector('.search-icon'),
   paginationContainer: document.getElementById('tui-pagination-container'),
+  scrollBtn: document.getElementById('scrollToTopBtn'),
 };

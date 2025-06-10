@@ -5,6 +5,7 @@ import {
   handleLearnMoreArtist,
   handleMoreBtn,
   handleResetFilter,
+  handleScrollBtn,
   insertLastPageButton,
 } from './js/handlers';
 import { handleOpenMobileMenu } from './js/mobile-menu';
@@ -54,3 +55,14 @@ initMainPage();
 
 refs.artistsFilterBtn.addEventListener('click', handleArtistsFilter);
 refs.resetFilter.addEventListener('click', handleResetFilter);
+
+// Показувати кнопку при прокрутці
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    refs.scrollBtn.classList.add('visible');
+    refs.scrollBtn.addEventListener('click', handleScrollBtn);
+  } else {
+    refs.scrollBtn.classList.remove('visible');
+    refs.scrollBtn.removeEventListener('click', handleScrollBtn);
+  }
+});
