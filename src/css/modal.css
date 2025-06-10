@@ -81,7 +81,7 @@
 
 }
 
-.modal-artist {}
+
 
 .modal-biography {
   margin-bottom: 16px;
@@ -173,7 +173,7 @@
   margin-bottom: 12px;
 }
 
-.modal-track-list {}
+
 
 .modal-track-item {
   display: flex;
@@ -235,7 +235,7 @@
     width: 706px;
   }
 
-  .modal-artist {}
+
 
   .modal-biography {
     margin-bottom: 48px;

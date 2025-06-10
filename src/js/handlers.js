@@ -6,6 +6,7 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
 import spriteUrl from './sprite';
+
 import {
   addMoreBtnArtists,
   createAllAlbums,

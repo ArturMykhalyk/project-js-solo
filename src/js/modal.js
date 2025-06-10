@@ -1,29 +1,41 @@
-//Описана робота модалки - відкриття закриття і все що з модалкою повʼязано
 import refs from './refs';
-export function openModal() {
-  refs.modal.classList.add('modal--is-open');
+
+function openModalMain(modal, closeBtn, onClickOutsideTarget = modal) {
+  modal.classList.add('modal--is-open');
   document.body.style.overflow = 'hidden';
-  document.addEventListener('keydown', closeModalOnEsc);
 
-  window.addEventListener('click', clickNoModal);
+  const close = () => closeModal(modal, closeBtn, close, onClickOutsideTarget);
 
-  refs.closeModalBtn.addEventListener('click', closeModal);
-}
+  document.addEventListener('keydown', closeOnEsc);
+  window.addEventListener('click', clickOutside);
+  closeBtn.addEventListener('click', close);
 
-function closeModal() {
-  document.body.style.overflow = '';
-  refs.modal.classList.remove('modal--is-open');
-  document.removeEventListener('keydown', closeModalOnEsc);
-  window.removeEventListener('click', clickNoModal);
-}
+  function closeOnEsc(event) {
+    if (event.key === 'Escape') {
+      close();
+    }
+  }
 
-function closeModalOnEsc(event) {
-  if (event.key === 'Escape') {
-    closeModal();
+  function clickOutside(event) {
+    if (event.target === onClickOutsideTarget) {
+      close();
+    }
+  }
+
+  function closeModal(modal, closeBtn, closeFn, outsideTarget) {
+    modal.classList.remove('modal--is-open');
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', closeOnEsc);
+    window.removeEventListener('click', clickOutside);
+    closeBtn.removeEventListener('click', closeFn);
   }
 }
-function clickNoModal(event) {
-  if (event.target === refs.modal) {
-    closeModal();
-  }
+
+//  для кожної модалки
+export function openModal() {
+  openModalMain(refs.modal, refs.closeModalBtn);
+}
+
+export function openModalFeedBack() {
+  openModalMain(refs.modalFeedBack, refs.closeFeedModalBtn, refs.modalFeedBack);
 }

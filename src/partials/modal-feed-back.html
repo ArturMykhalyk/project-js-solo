@@ -1,0 +1,32 @@
+<div class="modal-feed">
+  <div class="modal__feed-content">
+    <button class="modal__feed-close-btn" type="button">
+      <svg class="modal__feed-close-icon">
+        <use href="/img/sprite.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+    <p class="modal__feed-title">Submit feedback</p>
+    <form class="modal__feed-form">
+      <label for="name" class="modal__feed-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="modal__feed-input"
+        placeholder="Your name"
+      />
+
+      <label for="message" class="modal__feed-label">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        class="modal__feed-textarea"
+        placeholder="Type your message..."
+      ></textarea>
+
+      <div class="modal__feed-rating"></div>
+
+      <button type="submit" class="modal__feed-submit-btn">Submit</button>
+    </form>
+  </div>
+</div>

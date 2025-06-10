@@ -11,7 +11,10 @@ export default {
   moreBtn: document.querySelector('.moreButton'),
   feedBack: document.querySelector('.swiper-wrapper'),
   modal: document.querySelector('.modal'),
+  modalFeedBack: document.querySelector('.modal-feed'),
+  feedBackBtn: document.querySelector('.feed-back-btn'),
   closeModalBtn: document.querySelector('.modal__close-btn'),
+  closeFeedModalBtn: document.querySelector('.modal__feed-close-btn'),
   modalArtistBiography: document.querySelector('.modal-biography'),
   modalArtisTAlbums: document.querySelector('.modal-albums'),
 
@@ -34,4 +37,6 @@ export default {
   searchIconBtn: document.querySelector('.search-icon'),
   paginationContainer: document.getElementById('tui-pagination-container'),
   scrollBtn: document.getElementById('scrollToTopBtn'),
+  modalFeedRating: document.querySelector('.modal__feed-rating'),
+  modalFeedBackForm: document.querySelector('.modal__feed-form'),
 };

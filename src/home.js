@@ -9,8 +9,7 @@ import {
   insertLastPageButton,
 } from './js/handlers';
 import { handleOpenMobileMenu } from './js/mobile-menu';
-import { openModal } from './js/modal';
-import refs from './js/refs';
+import { openModalFeedBack } from './js/modal';
 
 import {
   createArtists,
@@ -21,10 +20,13 @@ import {
   showLoadMoreButton,
 } from './js/render-function';
 import { pagination } from './js/handlers';
-// openModal();
-
+import { feedBackSubmit } from './js/modal-feed-back';
+import refs from './js/refs';
 refs.mobileMenuOpen.addEventListener('click', handleOpenMobileMenu);
 refs.artistsList.addEventListener('click', handleLearnMoreArtist);
+refs.feedBackBtn.addEventListener('click', openModalFeedBack);
+
+refs.modalFeedBackForm.addEventListener('submit', feedBackSubmit);
 async function initMainPage() {
   document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth >= 1440) {

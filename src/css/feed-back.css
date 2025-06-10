@@ -6,6 +6,8 @@
 
 }
 
+
+
 .star-container {
     gap: 4px;
     margin-bottom: 32px;
@@ -75,9 +77,28 @@
     display: none;
 }
 
+.feed-back-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.feed-back-btn {
+    border-radius: 12px;
+    padding: 10px 24px;
+    width: 288px;
+    height: 47px;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(6, 3, 7, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(6, 3, 7, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+    background: #764191;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
 
 
-
+}
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
@@ -101,20 +122,22 @@
         width: 48px;
         height: 48px;
 
+
+
         &:disabled {
             opacity: 0.3;
         }
     }
 
-    .custom-prev {
+
+
+    .custom-prev .more-btn-icon {
+        fill: #fff;
         transform: rotate(90deg);
     }
 
-    .more-btn-icon {
-        fill: #fff
-    }
-
-    .custom-next {
+    .custom-next .more-btn-icon {
+        fill: #fff;
         transform: rotate(-90deg);
     }
 
@@ -135,7 +158,13 @@
 
     }
 
+    .feed-back-btn {
 
+        padding: 10px 14px;
+        width: 158px;
+        height: 47px;
+
+    }
 }
 
 /* Styles for Desktop devices */
@@ -154,6 +183,12 @@
 
     }
 
+    .feed-back-btn {
+
+        padding: 10px 24px;
+        width: 177px;
+
+    }
 
 
 }

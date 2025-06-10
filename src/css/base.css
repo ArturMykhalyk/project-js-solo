@@ -20,3 +20,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+a, button {
+  transition: all 0.250s ease-out;
+}
+
+a:hover, button:hover {
+  opacity: 0.95;
+  /* scale: 1.03; */
+  transform: translateY(-2px);
+
+}
